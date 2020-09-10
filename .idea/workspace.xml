@@ -98,13 +98,18 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.829@0.23.1440.829" timestamp="1599731876521" />
+    <state x="327" y="23" key="CommitChangelistDialog2" timestamp="1599747918442">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="327" y="23" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1599747918442" />
     <state x="229" y="76" key="SettingsEditor" timestamp="1599732111233">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="229" y="76" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1599732111233" />
-    <state x="320" y="177" key="Vcs.Push.Dialog.v2" timestamp="1599731879708">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2" timestamp="1599747977792">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1599747977792" />
     <state x="320" y="177" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1599731879708" />
   </component>
 </project>
