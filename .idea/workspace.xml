@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f7516cc-8a96-4b2e-841d-99d85a24b134" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/approval-steps.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/approval-steps.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/past-approval-member-data.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/past-approval-member-data.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hh.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599731471881</updated>
       <workItem from="1599731473140" duration="637000" />
+      <workItem from="1599747633078" duration="272000" />
     </task>
     <servers />
   </component>
@@ -90,6 +88,10 @@
         <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599731876521">
