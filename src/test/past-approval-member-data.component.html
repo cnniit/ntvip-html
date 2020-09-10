@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="header">
+        <div class="title">
+            <a href="javascript:;" routerLink='../../past'>全部审批</a>>
+            <a href="javascript:;" (click)="goBack()">学员排课</a>
+            <span class="desc-sp">>详情</span>
+        </div>
+    </div>
+    <div class="wrap">
+      <form
+        nz-form
+        [formGroup]="curriculumForm"
+        (ngSubmit)="submitForm()"
+        class="ant-advanced-search-form"
+      >
+        <div class="container-item">
+
+          <div class="container-item-classname">
+            <nz-form-item>
+              <nz-form-label [nzSm]="8" [nzXs]="24">排课计划</nz-form-label>
+              <nz-form-control>
+                <nz-input-group>
+                  <input nz-input placeholder="请输入" formControlName="lessonPlanName" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+          <div class="container-item-classname">
+            <nz-form-item>
+              <nz-form-label [nzSm]="8" [nzXs]="24">课程名称</nz-form-label>
+              <nz-form-control>
+                <nz-input-group>
+                  <input nz-input  formControlName="courseName" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+          <div class="container-item-classname">
+            <nz-form-item>
+              <nz-form-label [nzSm]="8" [nzXs]="24">课包名称</nz-form-label>
+              <nz-form-control>
+                <nz-input-group>
+                  <input nz-input  formControlName="coursePacketName" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </div>
+      </form>
+    </div>
+    <nz-table
+      [nzScroll]="{  y: '220px' }"
+      #editRowTable
+      nzBordered
+      [nzShowTotal]="totalTemplate"
+      [nzData]="curriculumData"
+      nzTableLayout="fixed"
+      [nzLoading]="isLoading"
+      [nzTotal]="total"
+      [nzFrontPagination]="false"
+      [nzShowSizeChanger]="true"
+      [(nzPageIndex)]="pageIndex"
+      [(nzPageSize)]="pageSize"
+      (nzPageIndexChange)="searchData()"
+      (nzPageSizeChange)="searchData(true)"
+    >
+
+      <thead>
+        <tr>
+          <th nzWidth='8%'>序号</th>
+          <th>订单编号</th>
+          <th>学员姓名</th>
+          <th>手机号码</th>
+          <th>商品编号</th>
+          <th>增减状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of curriculumData; let idx = index">
+          <td>{{ idx + 1 }}</td>
+          <td>{{ item.signNo }}</td>
+          <td>{{ item.nickName }}</td>
+          <td>{{ item.telphone }}</td>
+          <td>{{ item.classMarketCode }}</td>
+          <td>{{ item.opsType == 1 ? '新增' : '删减'}}</td>
+
+        </tr>
+      </tbody>
+    </nz-table>
+    <ng-template #totalTemplate let-total>共 {{ total }} 条记录</ng-template>
+
+    <div class="header">
+        <div class="title">
+            <span class="desc-sp">审批流程</span>
+        </div>
+    </div>
+    <div class="wrap">
+<!--        <nz-steps [nzCurrent]="totalSteps" [nzProgressDot]="progressTemplate">-->
+<!--            <ng-container *ngFor="let item of steps; let idx = index">-->
+<!--                <nz-step  [nzTitle]="item.aName" [nzSubtitle]="item.result" [nzDescription]="tpl" >-->
+<!--                </nz-step>-->
+<!--                <ng-template #tpl>-->
+<!--                  <p>{{ item.cName }}</p>-->
+<!--                  <p>{{ item.cTime }}</p>-->
+<!--                </ng-template>-->
+<!--              </ng-container>-->
+<!--          </nz-steps>-->
+<!--          <ng-template #progressTemplate let-dot let-status="status" let-index="index">-->
+<!--            <span nz-popover nzContent="第 {{ index+1 }} 个审批，状态: {{memberApprovalNode(status)}}" style="margin-left: -100%;">-->
+<!--              <ng-template [ngTemplateOutlet]="dot"></ng-template>-->
+<!--            </span>-->
+<!--          </ng-template>-->
+<!--      <app-search [information]="information" [url]="url" (editData)="query($event)"></app-search>-->
+      <app-approval-steps [approvals]="approvals" (steps)="steps" (totalSteps)="totalSteps"></app-approval-steps>
+    </div>
+  </div>
