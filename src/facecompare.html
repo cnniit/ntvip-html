@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="facecompare/angular.min.js"></script> 
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="alertable/js/jquery.alertable.js"></script>
+<style>
+		.compare-demo-page{
+			position: relative;
+			width: 80rem;
+			height: 56rem;
+			background: #e8ecf0
+		}
+		
+		.id-0{
+			width: auto;
+			height: 4rem;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin-top: 2rem;
+		
+		}
+		
+		.title {
+			width: 6rem;
+			height: 2rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 1.5rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 2rem;
+			letter-spacing: 0rem;
+			color: #333333;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 0 auto;
+		}
+		
+		.id {
+			width: 26rem;
+			height: 1rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 0.8rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 1rem;
+			letter-spacing: 0rem;
+			color: #666666;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 2.5rem auto 0 auto;
+		}
+		
+		.rectangle-13 {
+	width: 50rem;
+	height: 31rem;
+	background-color: #343434;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 8rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mask {
+	position: relative;
+	width: 23rem;
+	height: 14rem;
+	background-image: linear-gradient(90deg, 
+		); 
+}
+
+.rectangle-2 {
+	position: relative;
+	width: 23rem;
+	height: 4rem;
+	background-color: #1a1a1a;
+}
+
+.rectangle-15 {
+	width: 20rem;
+	height: 3rem;
+	border: solid 0.02rem #979797;
+position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto
+}
+
+.id-bdsc {
+	width: 5rem;
+	height: 2rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0.75rem 7.5rem;
+}
+
+.text-style-0 {
+	width: 16rem;
+	height: 3rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 2rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+}
+
+.text-style-1 {
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+
+}
+
+.rectangle-14 {
+	width: 50rem;
+	height: 8rem;
+	background-color: #d4dce3;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 38rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rectangle-17 {
+	width: 8rem;
+	height: 5rem;
+	background-image: linear-gradient(90deg, 
+		);
+		float: left;
+		margin-left: 1.5rem;
+		margin-top: 1.5rem
+}
+
+.rectangle-2-copy-3 {
+	width: 50rem;
+	height: 20rem;
+	background-color: #ffffff;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 48rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type=file]
+{
+  position:absolute;
+  z-index:1;
+  width: 20rem;
+  height: 3rem;
+  top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-left:0rem;
+	margin-top: 0rem;
+  opacity:0;
+  cursor:pointer;
+
+}
+
+.btn
+{
+
+  cursor:pointer;
+
+}
+
+		.result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111 {
+			width: 46rem;
+			height: 16rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 1rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 1rem;
+			letter-spacing: 0rem;
+			color: #333333;
+			text-align: left
+		}
+
+pre {outline: 0px solid #ccc;  
+	height: 14rem;
+	overflow-y:scroll;
+}
+
+		#can-left,#can-right{
+
+position: absolute;
+top:0;
+right: 0;
+left: 0;
+bottom: 0;
+margin: auto;
+z-index: 16;
+}
+
+</style>
+<title>人脸比对demo</title>
+<link rel="stylesheet" href="facecompare/myApp.css">
+<link rel="stylesheet" href="dot3/css/three-dots.min.css">
+
+<link rel="stylesheet" type="text/css" href="alertable/css/jquery.alertable.css">
+</head>
+<body ng-app="myApp">
+	<div ng-controller="CityController" class="container">
+		<div id="demo" class="compare-demo-page">
+				<div class="id-0">
+					<div class="title">人脸比对</div>
+					<div class="id">对比两张人脸的相似度，并给出相似度评分，从而判断是否同一个人</div>
+				</div>
+				<div class="rectangle-13">
+					<div>
+						<div style="float: left;margin-top: 4rem;margin-left: 1rem;">
+								
+						<div class="mask">
+							<div id="can-left" class="dot-spin" ></div>
+							<canvas id="myCanvas-left" width="368" height="224"><img style="width: 23rem; height: 14rem;"</canvas>
+						</div>
+							<div class="rectangle-2">
+								<div class="rectangle-15">
+									<div class="id-bdsc"><input type="file" id="file-uploader1" accept="image/*" file-model="images" onchange="angular.element(this).scope().img_upload('left',this.files)"/>本地上传</div>
+								</div>
+							</div>
+						</div>
+						<div style="float: right;margin-top: 4rem;margin-right: 1rem;">
+								
+							<div class="mask">
+								<div id="can-right" class="dot-spin" ></div>
+								<canvas id="myCanvas-right" width="368" height="224"><img style="width: 23rem; height: 14rem;"></canvas>
+							</div>
+							<div class="rectangle-2">
+								<div class="rectangle-15">
+									<div class="id-bdsc"><input type="file" id="file-uploader2" accept="image/*" file-model="images" onchange="angular.element(this).scope().img_upload('right',this.files)"/>本地上传</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="position: absolute; margin-top: 24rem;margin-left: 17rem">
+						<div class="text-style-0" id="faceResult" >{{message}}</div>
+						<div class="text-style-0 text-style-1">{{authReslut}}</div>
+					</div>
+				</div>
+				<div class="rectangle-14">
+						<div class="rectangle-17">
+								<div class="rectangle-17-1 btn" style="float: left;"><img ng-click="nextimg('left')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/c0892f8c51b85cdf.jpg"/></div>
+								<div class="rectangle-17-2 btn" style="float: left;"><img ng-click="nextimg('right')"  style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/e4408f7c860fb407.jpg"/></div>
+						</div>
+						<div class="rectangle-17">
+								<div class="rectangle-17-1 btn" style="float: left;"><img ng-click="nextimg('left')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/680ba75f3fb019ed.jpg"/></div>
+								<div class="rectangle-17-2 btn" style="float: left;"><img ng-click="nextimg('right')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/ae4e58e7ad279e2d.jpg"/></div>
+						</div>
+						<div class="rectangle-17">
+								<div class="rectangle-17-1 btn" style="float: left;"><img ng-click="nextimg('left')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/e52e51dabb982aee.jpg"/></div>
+								<div class="rectangle-17-2 btn" style="float: left;"><img ng-click="nextimg('right')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/2c41ec1a526bb026.jpg"/></div>
+						</div>
+						<div class="rectangle-17">
+								<div class="rectangle-17-1 btn" style="float: left;"><img ng-click="nextimg('left')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/f8ebb1db60a44c36.jpg"/></div>
+								<div class="rectangle-17-2 btn" style="float: left;"><img ng-click="nextimg('right')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/f08c732c42986ec0.jpg"/></div>
+						</div>
+						<div class="rectangle-17">
+								<div class="rectangle-17-1 btn" style="float: left;"><img ng-click="nextimg('left')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/518b35536497154e.jpg"/></div>
+								<div class="rectangle-17-2 btn" style="float: left;"><img ng-click="nextimg('right')" style="width: 4rem; height: 5rem;" src="http://i2.bvimg.com/659442/126b172da2bf2db5.jpg"/></div>
+						</div>
+				</div>
+				<div class="rectangle-2-copy-3">
+						<div style="width: 100%"><div style="width: 8rem;height:1rem;position: absolute;margin-left: 2rem;margin-top: 1rem;">Response JSON</div></div>
+						<pre id="result" class="result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111" style="position: absolute;margin-left: 2rem;margin-top: 4rem"></pre>
+				</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="facecompare/faceauth.js"></script>  
+
+</body>
+</html>

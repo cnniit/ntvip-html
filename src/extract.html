@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="extract/jquery.js"></script>
+<script src="extract/angular.min.js"></script>
+<script src="extract/clipboard.min.js"></script>
+
+<script src="alertable/js/jquery.alertable.js"></script>
+<style>
+		.compare-demo-page{
+			position: relative;
+			width: 80rem;
+			height: 40rem;
+			background: #e8ecf0
+		}
+		
+		.id-0{
+			width: auto;
+			height: 4rem;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin-top: 2rem;
+		
+		}
+		
+		.title {
+			width: 8rem;
+			height: 2rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 1.5rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 2rem;
+			letter-spacing: 0rem;
+			color: #333333;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 0 auto;
+		}
+		
+		.id {
+			width: 26rem;
+			height: 1rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 0.8rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 1rem;
+			letter-spacing: 0rem;
+			color: #666666;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 2.5rem auto 0 auto;
+		}
+		
+		.rectangle-13 {
+	width: 50rem;
+	height: 31rem;
+	background-color: #343434;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 8rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mask {
+	width: 23rem;
+	height: 14rem;
+	background-image: linear-gradient(90deg, 
+		);
+}
+
+.rectangle-2 {
+	position: relative;
+	width: 23rem;
+	height: 4rem;
+	background-color: #1a1a1a;
+}
+
+.rectangle-15 {
+	width: 20rem;
+	height: 3rem;
+	border: solid 0rem #979797;
+position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto
+}
+
+.id-bdsc {
+	width: 5rem;
+	height: 2rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0.75rem 7.5rem;
+}
+
+.text-style-0 {
+	width: 11rem;
+	height: 3rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 2rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+}
+
+.text-style-1 {
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+
+}
+
+.rectangle-14 {
+	width: 50rem;
+	height: 8rem;
+	background-color: #d4dce3;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 38rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rectangle-17 {
+	width: 8rem;
+	height: 5rem;
+	background-image: linear-gradient(90deg, 
+		);
+		float: left;
+		margin-left: 1.5rem;
+		margin-top: 1.5rem
+}
+
+.rectangle-2-copy-3 {
+	width: 50rem;
+	height: 20rem;
+	background-color: #ffffff;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 48rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rectangle-2-copy {
+	width: 13rem;
+	height: 17rem;
+	background-color: #1a1a1a;
+	position: relative;
+}
+
+
+
+.id-tzz {
+	width: 3rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+}
+
+.rectangle-3 {
+	width: 3rem;
+	height: 2rem;
+	background-color: #0089f0;
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+}
+
+.id-fz {
+	width: 2rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin:auto;
+}
+
+.line-copy {
+	width: 13rem;
+	height: 0.01rem;
+	border: solid 0.01rem #333333;
+}
+
+.id-str{
+	width: 11rem;
+	height: 12rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.8rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+	word-wrap:break-word;
+	text-align: left;
+
+	display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 12;
+overflow: hidden;
+}
+
+input[type=file]
+{
+  position:absolute;
+  z-index:1;
+  width: 22.5rem;
+  height: 2.5rem;
+  top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-left:-1.4rem;
+	margin-top: -0.3rem;
+  opacity:0;
+  cursor:pointer;
+}
+
+.btn
+{
+
+  cursor:pointer;
+
+}
+
+		.result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111 {
+			width: 46rem;
+			height: 14rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 1rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 1rem;
+			letter-spacing: 0rem;
+			color: #333333;
+			text-align: left
+		}
+
+pre {outline: 0px solid #ccc;  
+	height: 14rem;
+	overflow-y:scroll;
+}
+
+		#can{
+
+		position: absolute;
+		top:0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 16;
+		}
+
+#gray{
+	width: 23rem;
+	height: 14rem;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+margin-top: 0;
+
+	z-index: 15;
+}
+.blur{
+	-webkit-filter: blur(20px);
+	-moz-filter: blur(20px);
+	-o-filter: blur(20px);
+	-ms-filter: blur(20px);
+	filter: blur(20px); 
+}
+.gray { 
+background:rgb(0, 0, 0,0.2)
+}
+
+</style>
+<title>特征值提取demo</title>
+<link rel="stylesheet" href="extract/myApp.css">
+<link rel="stylesheet" href="dot3/css/three-dots.min.css">
+
+<link rel="stylesheet" type="text/css" href="alertable/css/jquery.alertable.css">
+</head>
+<body ng-app="myApp">
+  <script type="text/javascript">
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+$(function(){
+$("#btnfz").click(function(){
+	if($("#feature__").val()!=''){
+		//alert('特征码已复制!');		
+		// var f1 = $("#id-str1").val();
+		// 	var f2 = $("#id-str2").val();
+			
+        //     sessionStorage.idstr1
+        //     sessionStorage.idstr2=f2;
+	}else{
+		$.alertable.alert('请先上传图片!')
+	}
+
+});	
+})
+
+
+
+  </script>
+	<div ng-controller="CityController" class="container">
+		<div id="demo" class="compare-demo-page">
+				<div class="id-0">
+						<div class="title">特征值提取</div>
+						<div class="id">添加新ID和人脸照片到库存中</div>
+					</div>
+					<div class="rectangle-13">
+						<div >
+							<div style="position:absolute;margin-left: 6rem;margin-top: 7rem;">
+								<div id="can" class="dot-spin" ></div>
+								<div id="gray"></div>
+								<div class="mask"><canvas id="myCanvas-left" width="368" height="224"><img style="width: 23rem; height: 14rem;" src="pic/extract/1.jpeg"/></canvas></div>
+								<div class="rectangle-2">
+									<div class="rectangle-15">
+										<div class="id-bdsc"><input type="file" id="file-uploader" accept="image/*" file-model="images" onchange="angular.element(this).scope().img_upload('left',this.files)"/>本地上传</div>
+									</div>
+								</div>
+							</div>
+							<div class="rectangle-2-copy" style="float: right;position:relative; margin-top: 7rem;margin-right: 6rem;">
+								<div style="float: left;width: 13rem;height: 3rem;">
+									<div class="id-tzz" style="float: left;">特征值</div>
+									<div class="rectangle-3" style="float: right;">
+										<div class="id-fz btn" id="btnfz" style="width: 50px;height: 25px;" data-clipboard-action="copy" data-clipboard-target="#feature__">复制</div>
+									</div>
+								</div>
+								<div class="line-copy" style="float: left;width: 13rem;height: 0.1rem;"></div>
+								<div style="position: relative;">
+									<div class="id-str" style="position: absolute; width: 12rem;height: 13rem;" spellcheck="false" id="feature___" disabled="disabled"></div>
+								</div>
+								
+							</div>
+						</div>
+
+					</div>
+					<div class="rectangle-14">
+							<div class="rectangle-17 btn" ><img ng-click="nextimg()" src="http://i2.bvimg.com/659442/8dd7d752be037291.jpg"/></div>
+							<div class="rectangle-17 btn" ><img ng-click="nextimg()" src="http://i2.bvimg.com/659442/3500c5e2356ef18a.jpg"/></div>
+							<div class="rectangle-17 btn" ><img ng-click="nextimg()" src="http://i2.bvimg.com/659442/2d6b76cf749e57f1.jpg"/></div>
+							<div class="rectangle-17 btn" ><img ng-click="nextimg()" src="http://i2.bvimg.com/659442/9628d4266e20f137.jpg"/></div>
+							<div class="rectangle-17 btn" ><img ng-click="nextimg()" src="http://i2.bvimg.com/659442/a907eb5ecc8198ad.jpg"/></div>
+						</div>
+						<div class="rectangle-2-copy-3">
+								<div style="width: 100%"><div style="width: 8rem;height:1rem;position: absolute;margin-left: 2rem;margin-top: 1rem;">Response JSON</div></div>
+								<pre id="result" class="result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111" style="position: absolute;margin-left: 2rem;margin-top: 4rem"></pre>
+						</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="extract/faceauth.js"></script>
+
+<input style="width: 1px;height: 1px;" type="text"  id="feature__" ></input>
+</body>
+</html>

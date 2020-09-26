@@ -1,0 +1,262 @@
+body, html {
+    /**background-color: #edf0f2; **/
+    min-width: 1140px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+	-webkit-locale: "en";
+	display: block;
+}
+.container {
+    padding-top: 0px;
+    background-color: #fff;
+}
+
+div {
+    display: block;
+}
+
+.div{
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-family: Microsoft YaHei,微软雅黑,Arial,sans-serif;
+    box-sizing: border-box;
+    line-height: 1;
+	display: block;
+}
+
+
+/** div **/
+.compare-demo-page {
+    padding: 0px 0 0;
+    text-align: center;
+    color: #3e3e3e;
+    width: 1070px;
+    height: 1174px;
+    margin: 0 auto;
+}
+
+.compare-demo-page .showFunction{
+    font-size: 36px;
+    padding-bottom: -20px;
+}
+
+.compare-demo-page .compare-box {
+    height: 350px;
+    float: center;
+
+    display: inline-block;
+    text-align: center;
+    /*border: 1px solid #379edf;*/
+}
+.compare-demo-page .face-border {
+	width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+	position: relative;
+}
+element.style {
+    width: 261px;
+    height: 261px;
+    left: 125px;
+    top: 212px;
+}
+
+.compare-demo-page .landmarkBox {
+	width: 261px;
+    height: 261px;
+    left: 125px;
+    top: 212px;
+    position: relative;
+    outline: 2px solid #4aabe8;
+    z-index: 100;
+}
+
+
+/** 图像显示 **/
+.compare-demo-page .handle-img.first {
+    padding-right: 50px;
+}
+.compare-demo-page .handle-img {
+    float: left;
+}
+.compare-demo-page img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+	border: none;
+}
+img {
+    border: none;
+}
+.compare-demo-page .handle-img .img-box {
+    zoom: 1;
+    width: 270px;
+    height: 270px;
+    background-color: #e4e4e4;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/** 图片上传 **/
+.compare-demo-page .search-box {
+	width: 270px;
+    height: 42px;
+    margin: 20px 0 24px;
+}
+.compare-demo-page .search-box .upload-img:hover {
+    border: 1px solid #379edf;
+}
+.compare-demo-page .search-box .upload-img {
+    position: relative;
+    width: 270px;
+    height: 40px;
+    line-height: 36px;
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #cacaca;
+    background-color: #59b1f5;
+    font-size: 14px;
+    float: left;
+}
+.compare-demo-page .search-box #file-uploader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 270px;
+    height: 42px;
+    cursor: pointer;
+}
+.compare-demo-page .search-box input.search-input {
+    border: 1px solid #59b1f5;
+    width: 278px;
+    height: 38px;
+    line-height: 40px;
+    text-indent: 1em;
+    float: right;
+}
+.compare-demo-page .search-box button {
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #379edf;
+    background-color: #379edf;
+    font-size: 14px;
+    width: 66px;
+    height: 40px;
+    float: right;
+}
+
+/** 示例图片 
+.compare-demo-page .swiper-box {
+    width: 270px;
+    height: 85px;
+    overflow: hidden;
+    padding: 0 30px;
+    margin-bottom: 19px;
+    position: relative;
+}
+.compare-demo-page .handle-img .swiper-box .swiper-container {
+    position: static;
+}
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}**/
+
+/** 比较结果 **/
+.compare-demo-page .result-box {
+    height: 200px;
+    width: 600px;
+    border: 1px solid #cacaca;
+    /*padding: 10px;*/
+    text-align: center;
+
+    display: inline-block;
+    text-align: center;
+}
+
+.compare-demo-page .response-json {
+    width: 270px;
+    background: #fbfbfb;
+    border: 1px solid #cacaca;
+    overflow: hidden;
+    padding: 20px;
+}
+.compare-demo-page .response-json textarea {
+	outline:none;
+    resize: none;
+    background: #fbfbfb;
+    border: none;
+    overflow-y: scroll;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 16px;
+	letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+	
+}
+
+
+.input{
+    color: inherit;
+    font: inherit;
+}
+
+.my-canvas{
+    height: 270px;
+    width: 270px;
+	background-color: #e4e4e4;
+}
+
+element.style {
+    width: 358px;
+    height: 441px;
+    top: 50%;
+    left: 50%;
+    margin-left: -179px;
+    margin-top: -220.5px;
+}
+
+.compare-demo-page .result-box .face-result {
+    height: 20px;
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 50px;
+    text-align: center;
+    color:#379edf;
+    font-size: 28px;
+    display: inline-block;
+}
+
+
+
+
+

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="addface/angular.min.js"></script>
+<style>
+.compare-demo-page{
+	position: relative;
+	width: 80rem;
+	height: 56rem;
+	background: #e8ecf0
+}
+
+/* *{
+	width: 6rem;
+	height: 2rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 2rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 2rem;
+	letter-spacing: 0rem;
+	color: #333333;
+} */
+
+
+/* .rlzc{
+	margin-top: 1.8rem;
+}
+
+.id-rlzc {
+	width: 13.8rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.7rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 1rem;
+	letter-spacing: 0rem;
+	color: #999999;
+	margin-top: 1rem;
+	margin:1rem auto;
+} */
+
+.rectangle-id {
+
+	background:#e8ecf0
+}
+
+.id-0{
+	/* margin-top: 1.8rem; */
+	font-size: 1.5rem;
+}
+
+.id {
+	width: 15rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.8rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 1rem;
+	letter-spacing: 0rem;
+	color: #666666;
+	margin-top: 1rem;
+	margin:1rem auto;
+}
+
+.rectangle-13 {
+	width: 50rem;
+	height: 31rem;
+	background-color: #343434;
+	margin: auto;
+}
+
+.wrap{
+	padding-top: 3rem;
+}
+
+.rectangle-16 {
+	position: relative;
+	width: 23rem;
+	height: 3rem;
+	border: solid 0.01rem #979797;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background: #343434
+}
+
+.id-rlid {
+	width: 5rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	float: left;
+	margin: 0.8rem auto;
+}
+
+.id-qsrid {
+	width: 8rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #999999;
+	float: left;
+	margin: 0.6rem auto;
+}
+
+.rectangle-16-copy {
+	width: 23rem;
+	height: 14rem;
+
+	margin: auto;
+}
+
+.rectangle-2 {
+	position: relative;
+	width: 23rem;
+	height: 4rem;
+	background-color: #1a1a1a;
+	margin: auto;
+}
+
+.rectangle-15 {
+	width: 20rem;
+	height: 3rem;
+	border: solid 0.01rem #979797;
+	position: absolute;
+	left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+}
+
+.id-bdsc{
+	width: 5rem;
+	height: 1.5rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1.1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+}
+
+.rectangle-15-copy {
+	position: relative;
+	width: 20rem;
+	height: 3rem;
+	background-color: #0089f0;
+	margin-top: 1.6rem;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.id-zc{
+	width: 100%;
+	height: 1.5rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1.1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+}
+
+.rectangle-14 {
+	position: relative;
+	width: 50rem;
+	height: 8rem;
+	background-color: #d4dce3;
+	margin: auto;
+}
+
+.rectangle-17 {
+	width: 8rem;
+	height: 6rem;
+	background-image: linear-gradient(90deg, 
+		);
+		float: left;
+            margin:1rem 1rem;
+}
+
+.rectangle-2-copy-3 {
+	position: relative;
+	width: 50rem;
+	height: 18rem;
+	background-color: #ffffff;
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111 {
+	position: absolute;
+	width: 14rem;
+	height: 6rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 1rem;
+	letter-spacing: 0rem;
+	color: #333333;
+	margin-left: 2rem;
+	margin-top: 4rem;
+}
+
+</style>
+<title>人脸注册demo</title>
+<link rel="stylesheet" href="addface/myApp.css">
+</head>
+<body ng-app="myApp">
+	<div ng-controller="CityController" class="container">
+		<div id="demo" class="compare-demo-page">
+			
+			<div class="rectangle-id">
+				<div class="id-0">人脸注册</div>
+				<div class="id">添加新ID和人脸照片到库存中</div>
+			</div>
+			<div class="rectangle-13">
+				<div class="wrap">
+					<div class="rectangle-16">
+						<div class="id-rlid">人脸ID：</div>
+						<div class="id-qsrid"><input type="text" value="请输入人脸ID名称" style="height: 1rem;"></input></div>
+					</div>
+					<div class="rectangle-16-copy"><img src="pic/register/1.jpeg"/></div>
+					<div class="rectangle-2">
+						<div class="rectangle-15">
+							<div class="id-bdsc">本地上传</div>
+						</div>
+					</div>
+					<div class="rectangle-15-copy">
+						<div class="id-zc">注册</div>
+					</div>
+				</div>
+			</div>
+			<div class="rectangle-14">
+				<div class="rectangle-17"><img src="pic/register/1.jpeg"/></div>
+				<div class="rectangle-17"><img src="pic/register/2.jpeg"/></div>
+				<div class="rectangle-17"><img src="pic/register/3.jpeg"/></div>
+				<div class="rectangle-17"><img src="pic/register/4.jpeg"/></div>
+				<div class="rectangle-17"><img src="pic/register/5.jpeg"/></div>
+			</div>
+			<div class="rectangle-2-copy-3">
+				<div style="width: 100%"><div style="width: 8rem;height:1rem;position: absolute;margin-left: 2rem;margin-top: 1rem;">Response JSON</div></div>
+				<div class="result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111">{
+						"result": [
+							{
+								"index_i": "0",
+								"index_j": "1",
+								"score": 94.979476928711
+							}
+						],
+						"result_num": 1,
+						"log_id": "2725423356062111"
+					}</div>
+			</div>
+			<!-- <h2 class="showFunction">
+				人脸注册
+			</h2>
+			<div class="face-add">人脸ID：<input id="faceid" style="width: 325px" type="text" ng-model="uid" test /></div>
+			
+			<div class="compare-box">
+								
+				<div class="img">
+					
+					<div class="img-box img-box-one">
+						<canvas id="myCanvas-left" width="400" height="400" style="background:#e4e4e4">
+					</div>
+					
+					<div class="search-box">
+						<lable for="file-uploader" class="upload-img">
+							<i class="icons icon-upload">
+							</i>
+							<span>
+								上传照片
+							</span>
+
+							<input type="file" id="file-uploader" accept="image/*" file-model="images" onchange="angular.element(this).scope().img_upload('left',this.files)"  class="file-uploader-one"/>
+						</lable>
+					
+					
+						<lable for="file-uploader" class="upload-img" style="margin-top: 20px">
+							<i class="icons icon-upload">
+							</i>
+							<span>
+								<button ng-click="register()">注册</button>
+							</span>
+
+							 
+						</lable>
+					<br>
+				</div>
+
+			</div>
+		</div> -->
+	</div>
+	<script type="text/javascript" src="addface/faceauth.js"></script>
+
+
+</body>
+</html>

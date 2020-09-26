@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="delface/angular.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="alertable/js/jquery.alertable.js"></script>
+<script type="text/javascript">
+	$(function() {
+	  $('.alert-demo').on('click', function() {
+		// $.alertable.alert('Howdy!');
+	  });
+	});
+</script>
+<style>
+		.compare-demo-page{
+			position: relative;
+			width: 80rem;
+			height: 40rem;
+			background: #e8ecf0
+		}
+		
+		.id-0{
+			width: auto;
+			height: 4rem;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin-top: 2rem;
+		
+		}
+		
+		.title {
+			width: 6rem;
+			height: 2rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 1.5rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 2rem;
+			letter-spacing: 0rem;
+			color: #333333;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 0 auto;
+		}
+		
+		.id {
+			width: 20rem;
+			height: 1rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 0.8rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 1rem;
+			letter-spacing: 0rem;
+			color: #666666;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 2.5rem auto 0 auto;
+		}
+		
+.rectangle-13 {
+	width: 50rem;
+	height: 31rem;
+	background-color: #343434;
+	position: relative;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 8rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.group {
+	width: 80rem;
+	height: 3rem;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 14rem;
+	margin-left: 8rem;
+	float: left;
+}
+
+.rectangle-16 {
+	width: 23rem;
+	height: 3rem;
+	border: solid 0.02rem #979797;
+	
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	float: left;
+
+}
+
+.id-rl {
+	width: 6rem;
+	height: 1.5rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	float: left;
+	margin-top: 0.75rem;
+}
+
+.id-qsrrl {
+	width: 10rem;
+	height: 1.5rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #999999;
+	float: left;
+	margin-top: 0.75rem;
+	
+}
+
+.rectangle-15-copy {
+	width: 9rem;
+	height: 3rem;
+	background-color: #0089f0;
+	float: left;
+	margin-left: 0.5rem
+
+}
+
+.id-del {
+	width: 2rem;
+	height: 1.5rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	float: left;
+	margin-top: 0.75rem;
+	margin-left: 3.5rem;	
+}
+
+.btn
+{
+
+  cursor:pointer;
+
+}
+
+.t{
+/* transition: all 0.30s ease-in-out; */
+color: white;
+background-color: rgb(0, 0, 0,0);
+
+border:0 rgba(69,55,55,0.8) solid
+}
+.t:focus{
+	border:none
+}
+		</style>
+<title>人脸删除demo</title>
+<link rel="stylesheet" href="delface/myApp.css">
+
+<link rel="stylesheet" type="text/css" href="alertable/css/jquery.alertable.css">
+</head>
+<body ng-app="myApp">
+	<div ng-controller="CityController" class="container">
+		<div id="demo" class="compare-demo-page">
+				<div class="id-0">
+						<div class="title">人脸删除</div>
+						<div class="id">添加新ID和人脸照片到库存中</div>
+				</div>
+				<div class="rectangle-13">
+					<div class="group">
+						<div class="rectangle-16">
+							<div class="id-rl">人脸ID：</div>
+							<div class="id-qsrrl"><input id="faceid" class="t" style="width:10rem" type="text" ng-model="uid" test placeholder="请输入人脸ID名称"/></div>
+						</div>
+						<div class="rectangle-15-copy btn" ng-click="delface()">
+							<div class="id-del alert-demo btn-danger" >删除</div>
+						</div>
+					</div>
+				</div>
+			<!-- <h2 class="showFunction">
+				人脸删除
+			</h2>
+			<div class="compare-box">
+					
+					<div class="search-box">
+					<div class="face-del" >人脸ID：<input id="faceid" style="width: 225px" type="text" ng-model="uid" test /></div>
+						<lable for="file-uploader" class="upload-img">
+							<i class="icons icon-upload">
+							</i>
+							<span>
+								<button ng-click="delface()">删除</button>
+							</span>
+
+							
+						</lable>
+					</div>
+					<br>
+				</div>
+
+			</div> -->
+		</div>
+	</div>
+	<script type="text/javascript" src="delface/faceauth.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="addface/angular.min.js"></script>
+
+<title>设置</title>
+<link rel="stylesheet" href="delface/myApp.css">
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" >
+	var addr;
+	$(document).ready(function () {
+
+		$("#addr").val(addr)
+	    $("#btnSubmit").click(function (event) {
+			var addr = $("#addr").val()
+	    	if(addr==undefined || $.trim(addr)==""){
+	    		alert("地址不能为空")
+	    		return;
+	    	}
+			
+			sessionStorage.addr=addr;
+        	$("#addr").val(addr)
+        	alert("设置成功")
+        	
+	        event.preventDefault();
+
+
+	    });
+
+	});
+	</script>	
+    <script>  
+		window.onload=function(){ (function(){	          
+		
+		var html = document.documentElement;  
+		
+		var windowWidth = html.clientWidth;  
+		
+		html.style.fontSize = windowWidth /1366+ 'rem';   
+		
+		})();         }
+			</script>
+	<style>
+		html{
+    font-size: calc(1rem);
+}
+		.compare-demo-page{
+			position: relative;
+	width: 80rem;
+	height: 40rem;
+	background: #e8ecf0
+}
+
+.repeat-group {
+	width: 72rem;
+	height: 34rem;
+	background: #e8ecf0;
+	position: absolute;
+            left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+}
+
+.rectangle-2-1,.rectangle-2-2,.rectangle-2-3 {
+	width: 15rem;
+	height: 15rem;
+	background-color: #ffffff;
+	box-shadow: 0rem 0rem 1rem 0rem 
+		rgba(0, 0, 0, 0.02);
+		float: left;
+		margin-right: 4rem;
+
+}
+.rectangle-2-4 {
+	width: 15rem;
+	height: 15rem;
+	background-color: #ffffff;
+	box-shadow: 0rem 0rem 1rem 0rem 
+		rgba(0, 0, 0, 0.02);
+		float: left;
+
+}
+
+.rectangle-2-5,.rectangle-2-6,.rectangle-2-7 {
+	width: 15rem;
+	height: 15rem;
+	background-color: #ffffff;
+	box-shadow: 0rem 0rem 1rem 0rem 
+		rgba(0, 0, 0, 0.02);
+		float: left;
+		margin-right: 4rem;
+		margin-top: 4rem;
+}
+
+.mask {
+	position: relative;
+	width: 15rem;
+	height: 8rem;
+	background-color: #e6e6e6;
+}
+
+/* 人脸注册| 开始*/
+.pexels-photo-789786 {
+	position:absolute;
+	width: 8rem;
+	height: 5rem;
+	background: cadetblue;
+	margin: 1rem 3.5rem 2rem 3.5rem;
+	z-index: 2;
+
+}
+
+.oval {
+	position:absolute;
+	width: 2rem;
+	height: 2rem;
+	background-color: #ffffff;
+	z-index: 3;
+	margin: 5.5rem 6.5rem 0.5rem 6.5rem;
+	border-radius: 1rem;
+}
+
+.group-2 {
+
+	width: 1rem;
+	height: 1rem;
+	z-index: 5;
+	background: khaki;
+	position: absolute;
+            left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+}
+
+.rectangle-5-1 {
+
+	width: 0.1rem;
+	height: 1rem;
+	background-color: #0089f0;
+	border-radius: 6rem;
+	z-index: 7;
+	position: absolute;
+	left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+}
+
+.rectangle-5-2 {
+
+	width: 1rem;
+	height: 0.1rem;
+	background-color: #0089f0;
+	border-radius: 6rem;
+	z-index: 7;
+	position: absolute;
+	left:0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+}
+
+.rlzc{
+	margin-top: 1.8rem;
+}
+
+.id-rlzc {
+	width: 13.8rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.7rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 1rem;
+	letter-spacing: 0rem;
+	color: #999999;
+	margin-top: 1rem;
+	margin:1rem auto;
+}
+
+.id-rlzc-align{
+	text-align:left;
+}
+
+.btn
+{
+  cursor:pointer;
+}
+
+/* 人脸注册|结束*/
+
+
+	</style>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="CityController" class="container">
+		<div id="demo" class="compare-demo-page">
+
+		    <div class="repeat-group">
+				<div class="rectangle-2-1  btn" onclick="window.location='addface.html';">
+					<div class="mask">
+						<div><img src="pic/index/1.jpg"></div>
+					</div>
+					<div class="rlzc">人脸注册</div>
+					<div class="id-rlzc">添加新ID和人脸照片到库存中</div>
+				</div>
+				<div class="rectangle-2-2 btn" onclick="window.location='delface.html';">
+					<div class="mask">
+						<div><img src="pic/index/2.jpg"></div>
+					</div>
+					<div class="rlzc">人脸删除</div>
+					<div class="id-rlzc id-rlzc-align">通过输入人脸ID，删除人脸集合中的对应ID</div>
+				</div>
+				<div class="rectangle-2-3 btn" onclick="window.location='findface2.html';">
+						<div class="mask">
+								<div><img src="pic/index/3.jpg"></div>
+							</div>
+							<div class="rlzc">人脸检索</div>
+							<div class="id-rlzc id-rlzc-align">针对一张人脸照片，在人脸集合中搜索，找出相似的多张人脸ID，给出相似度分值</div>
+				</div>
+				<div class="rectangle-2-4 btn" onclick="window.location='facecompare.html';">
+						<div class="mask">
+								<div><img src="pic/index/4.jpg"></div>
+							</div>
+							<div class="rlzc">人脸比对</div>
+							<div class="id-rlzc id-rlzc-align">对比两张人脸的相似度，并给出相似度评分，从而判断是否同一个人</div>
+				</div>
+				<div class="rectangle-2-5 btn" onclick="window.location='faceattribute2.html';">
+						<div class="mask">
+								<div><img src="pic/index/5.jpg"></div>
+							</div>
+							<div class="rlzc">人脸属性值检查</div>
+							<div class="id-rlzc id-rlzc-align">精准定位图中人脸，分析性别、年龄、颜值等多种人脸属性</div>
+				</div>
+				<div class="rectangle-2-6 btn" onclick="window.location='extract.html';">
+						<div class="mask">
+								<div><img src="pic/index/6.jpg"></div>
+							</div>
+							<div class="rlzc">特征值提取</div>
+							<div class="id-rlzc">通过人脸照片获取特征值</div>
+				</div>
+				<div class="rectangle-2-7 btn" onclick="window.location='comparefeature.html';">
+						<div class="mask">
+								<div><img src="pic/index/7.jpg"></div>
+							</div>
+							<div class="rlzc">特征值比对</div>
+							<div class="id-rlzc id-rlzc-align">对比两个人脸照片特征值，并给出相似度评分，从而判断是否同一个人</div>
+				</div>
+				
+			</div>		
+
+	</div>
+	<script type="text/javascript" src="addface/faceauth.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>特征值比对demo</title>
+<link rel="stylesheet" href="comparefeature/myApp.css">
+
+<link rel="stylesheet" type="text/css" href="alertable/css/jquery.alertable.css">
+</head>
+<script src="comparefeature/jquery.js">
+</script>
+<script src="comparefeature/angular.min.js">
+</script>
+
+<script src="alertable/js/jquery.alertable.js"></script>
+<style>
+		.compare-demo-page{
+			position: relative;
+			width: 80rem;
+			height: 64rem;
+			background: #e8ecf0
+		}
+		
+		.id-0{
+			width: auto;
+			height: 4rem;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin-top: 2rem;
+		
+		}
+		
+		.title {
+			width: 8rem;
+			height: 2rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 1.5rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 2rem;
+			letter-spacing: 0rem;
+			color: #333333;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 0 auto;
+		}
+		
+		.id {
+			width: 26rem;
+			height: 1rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 0.8rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 1rem;
+			letter-spacing: 0rem;
+			color: #666666;
+			position: absolute;
+			top:0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: 2.5rem auto 0 auto;
+		}
+		
+		.rectangle-13 {
+	width: 50rem;
+	height: 31rem;
+	background-color: #343434;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 8rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mask {
+	width: 23rem;
+	height: 14rem;
+	background-image: linear-gradient(90deg, 
+		);
+}
+
+.rectangle-2 {
+	position: relative;
+	width: 23rem;
+	height: 4rem;
+	background-color: #1a1a1a;
+}
+
+.rectangle-15 {
+	width: 20rem;
+	height: 3rem;
+	border: solid 0rem #979797;
+position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto
+}
+
+.id-bdsc {
+	width: 5rem;
+	height: 2rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0.75rem 7.5rem;
+}
+
+.text-style-0 {
+	width: 11rem;
+	height: 3rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 2rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+}
+
+.text-style-1 {
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+
+}
+
+.rectangle-14 {
+	width: 50rem;
+	height: 8rem;
+	background-color: #d4dce3;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 38rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rectangle-17 {
+	width: 8rem;
+	height: 5rem;
+	background-image: linear-gradient(90deg, 
+		);
+		float: left;
+		margin-left: 1.5rem;
+		margin-top: 1.5rem
+}
+
+.rectangle-2-copy-3 {
+	width: 50rem;
+	height: 20rem;
+	background-color: #ffffff;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 40rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rectangle-2-copy {
+	width: 13rem;
+	height: 17rem;
+	background-color: #1a1a1a;
+	position: relative;
+}
+
+
+
+.id-tzz {
+	width: 4rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+}
+
+.rectangle-3 {
+	width: 3rem;
+	height: 2rem;
+	background-color: #0089f0;
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+}
+
+.id-fz {
+	width: 2rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin:auto;
+}
+
+.line-copy {
+	width: 13rem;
+	height: 0.01rem;
+	border: solid 0.01rem #333333;
+}
+
+.id-str{
+	width: 11rem;
+	height: 12rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 0.8rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+	word-wrap:break-word;
+	text-align: left;
+
+	display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 12;
+overflow: hidden;
+}
+
+.oval {
+	width: 7rem;
+	height: 7rem;
+	background-color: #0089f0;
+	border-radius: 3.5rem;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-top: 11rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.id-bd {
+	width: 2rem;
+	height: 1rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+margin: auto
+}
+
+.text-style-0 {
+	width: 14rem;
+	height: 3rem;
+	font-family: PingFang-SC-Regular;
+	font-size: 2rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+}
+
+.text-style-1 {
+	font-family: PingFang-SC-Regular;
+	font-size: 1rem;
+	font-weight: normal;
+	letter-spacing: 0rem;
+	color: #ffffff;
+
+}
+
+.btn
+{
+
+  cursor:pointer;
+
+}
+
+		.result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111 {
+			width: 46rem;
+			height: 14rem;
+			font-family: PingFang-SC-Regular;
+			font-size: 1rem;
+			font-weight: normal;
+			font-stretch: normal;
+			line-height: 1rem;
+			letter-spacing: 0rem;
+			color: #333333;
+			text-align: left
+		}
+
+pre {outline: 0px solid #ccc;  
+	height: 14rem;
+	overflow-y:scroll;
+}
+
+</style>
+<body ng-app="myApp">
+	<div ng-controller="CityController" class="container">
+		<div id="demo" class="compare-demo-page">
+				<div class="id-0">
+						<div class="title">特征值比对</div>
+						<div class="id">对比两个人脸照片特征值，并给出相似度评分，从而判断是否同一个人</div>
+					</div>
+					<div class="rectangle-13">
+						<div >
+
+							<div class="rectangle-2-copy" style="float: left;position:relative; margin-top: 4rem;margin-left: 7rem;">
+									<div style="float: left;width: 13rem;height: 3rem;">
+										<div class="id-tzz" style="float: left;">特征值1</div>
+										<div class="rectangle-3 btn" style="float: right;">
+											<div class="id-fz">粘贴</div>
+										</div>
+									</div>
+									<div class="line-copy" style="float: left;width: 13rem;height: 0.1rem;"></div>
+									<div style="position: relative;">
+										<!-- <div class="id-str" style="position: absolute; width: 12rem;height: 13rem;">
+											<textarea id="area1" spellcheck="false" style="width: 12rem; height: 13rem; overflow:hidden; resize: none;border:1;outline:none;" ng-model="a" test placeholder="请粘贴第一个特征值......" ></textarea>
+										</div> -->
+										<textarea class="id-str" onblur="blur1()" style="position: absolute; width: 12rem;height: 12rem;border:0;resize: none;outline:none;background: #1a1a1a" id="area1" spellcheck="false"  ng-model="a" test placeholder="请粘贴第一个特征值......" ></textarea>
+									</div>
+							</div>
+
+							<div class="oval btn" ng-click="show()">
+								<div class="id-bd">比对</div>
+							</div>
+
+							<div class="rectangle-2-copy" style="float: right;position:relative; margin-top: 4rem;margin-right: 7rem;">
+								<div style="float: left;width: 13rem;height: 3rem;">
+									<div class="id-tzz" style="float: left;">特征值2</div>
+									<div class="rectangle-3 btn" style="float: right;">
+										<div class="id-fz">粘贴</div>
+									</div>
+								</div>
+								<div class="line-copy" style="float: left;width: 13rem;height: 0.1rem;"></div>
+								<div style="position: relative;">
+									<!-- <div class="id-str" style="position: absolute; width: 12rem;height: 13rem;">
+										<textarea id="area2" spellcheck="false" style="width: 12rem; height: 13rem; overflow:hidden; resize: none;border:1;outline:none;" ng-model="b" test placeholder="请粘贴第二个特征值......"></textarea>
+									</div> -->
+									<textarea class="id-str" onblur="blur2()" style="position: absolute; width: 12rem;height: 12rem;border:0;resize: none;outline:none;background: #1a1a1a" id="area2" spellcheck="false"  ng-model="b" test placeholder="请粘贴第二个特征值......" ></textarea>
+								</div>	
+							</div>
+						</div>
+						<div>
+								<div style="position: absolute; margin-top: 24rem;margin-left: 18rem">
+										<div class="text-style-0"  id="faceResult">{{message}}</div>
+										<div class="text-style-0 text-style-1">{{authReslut}}</div>
+									</div>
+						</div>
+					</div>
+
+					<div class="rectangle-2-copy-3">
+							<div style="width: 100%"><div style="width: 8rem;height:1rem;position: absolute;margin-left: 2rem;margin-top: 1rem;">Response JSON</div></div>
+							<pre id="result" class="result-index-i-0-index-j-1-score-94-979476928711-result-num-1-log-id-2725423356062111" style="position: absolute;margin-left: 2rem;margin-top: 4rem"></pre>
+					</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="comparefeature/faceauth.js"></script>  
+	<script type="text/javascript" >
+		
+		function blur1(){
+				sessionStorage.idstr1=$("#area1").val();
+				sessionStorage.idstr2=$("#area2").val();		
+		}
+		function blur2(){
+				sessionStorage.idstr1=$("#area1").val();
+				sessionStorage.idstr2=$("#area2").val();		
+		}
+
+		window.onload = function(){
+			$("#area1").val(sessionStorage.idstr1);
+			$("#area2").val(sessionStorage.idstr2);
+		}
+        </script>
+</body>
+</html>

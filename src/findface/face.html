@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="findface/angular.min.js"></script>
+<title>人脸检索demo</title>
+<link rel="stylesheet" href="findface/myApp.css">
+</head>
+<body ng-app="myApp">
+	<div ng-controller="CityController" class="container">
+		<div id="demo" class="compare-demo-page">
+			<h2 class="showFunction">
+				人脸检索
+			</h2>
+			<!-- 比较div -->
+			<div class="showFunction">
+				
+				<!-- 左侧div -->
+				<div class="img">
+					<!-- 图像显示 -->
+					<div class="img-box img-box-one">
+						<canvas id="myCanvas-left" width="400" height="400" style="background:#e4e4e4">
+					</div>
+					<div class="face-count">最高得分人脸个数（1~10）：<input type="number" name="points" min="1" max="10" style="width: 40px" ng-model="count" test /></div>
+					<!-- 图片上传 -->
+					<div class="search-box">
+						<lable for="file-uploader" class="upload-img">
+							<i class="icons icon-upload">
+							</i>
+							<span>
+								上传照片
+							</span>
+
+							<input type="file" id="file-uploader" accept="image/*" file-model="images" onchange="angular.element(this).scope().img_upload('left',this.files)"  class="file-uploader-one"/>
+						</lable>
+					</div>
+				</div>
+					
+					
+				<div class="compare-result result-box"  style="height:320px">
+					<Label id="faceGender_" class="face-result">检索结果： </Label><br>
+					<Label id="faceGender" class="face-result"> </Label><br>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="findface/faceauth.js"></script>
+
+</body>
+</html>
